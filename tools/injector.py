@@ -25,9 +25,14 @@ Built by: {AUTHOR}
 def build_flags():
     parser = argparse.ArgumentParser(
         prog="Injector",
-        description="A generic injection testing tool using custom payload wordlists.",
+        description=(
+            "A generic injection testing tool using custom payload wordlists.\n\n"
+            "** IMPORTANT: **\n"
+            "  Target URL or request body MUST contain the INJECT placeholder."
+        ),
+        formatter_class=argparse.RawTextHelpFormatter,
         add_help=True
-        )
+    )
     parser.add_argument("-u", "--url", dest="url", type=str, help="Target URL to test.")
     parser.add_argument("--rate", dest="rate", type=int, default=0, help="Maximum requests per second (default: unlimited).")
     parser.add_argument("-w", "--wordlist", dest="wordlist", type=str, help="Path to the custom injection payload wordlist.")
@@ -64,7 +69,7 @@ def fuzz_location(args):
         locations.append("data")
 
     if not locations:
-        raise ValueError("The target must contain an INJECT placeholder in the URL or data.")
+        raise ValueError("The target must contain an 'INJECT' placeholder in the URL or data.")
 
     return locations
 
