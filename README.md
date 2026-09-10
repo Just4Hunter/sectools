@@ -25,11 +25,11 @@ All tools are kept under the `tools/` directory.
 Clone the repository:
 
 ```bash
-git clone https://github.com/Pupsix/sectools.git
+git clone https://github.com/Just4Hunter/sectools.git
 cd sectools
 ```
 
-Run the installer:
+Run the installer to install all available tools:
 
 ```bash
 ./install.sh
@@ -40,6 +40,36 @@ After installation, tools can be run directly from the terminal:
 ```bash
 injector
 ```
+
+### Install a specific tool
+
+To install only a specific tool:
+
+```bash
+./install.sh injector
+```
+
+This installs `injector.py` and makes it available as:
+
+```bash
+injector
+```
+
+### Uninstall
+
+Remove a specific tool:
+
+```bash
+./uninstall.sh injector
+```
+
+Remove all installed tools:
+
+```bash
+./uninstall.sh
+```
+
+Uninstalling removes the installed symlinks only. The source files inside `tools/` are preserved.
 
 ## Adding a Tool
 
