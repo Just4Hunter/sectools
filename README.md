@@ -108,6 +108,7 @@ The installer will automatically discover and install the tool.
 | Tool       | Description                                                   |
 | ---------- | ------------------------------------------------------------- |
 | `injector` | Generic injection testing tool using custom payload wordlists |
+| `racer`    | Send concurrent HTTP requests in synchronized bursts         |
 
 More tools will be added over time.
 
