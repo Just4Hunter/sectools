@@ -10,7 +10,7 @@ import argparse
 from urllib.parse import urlparse
 
 
-VERSION = "0.1.0"
+VERSION = "0.1.1"
 AUTHOR = "Hunter"
 
 def banner():
@@ -50,6 +50,7 @@ def build_flags():
     parser.add_argument("-d", "--data", dest="data", type=str, help="Request body containing the INJECT placeholder.")
     parser.add_argument("--timeout", dest="timeout", type=int, default=10, help="Request timeout in seconds (default: 10).")
     parser.add_argument("--retry", dest="retry", type=int, default=0, help="Number of times to retry failed requests (default: 0).")
+    parser.add_argument("--mode", dest="mode", type=str, default="single-request", choices=["single", "cross", "sync", "step"], help="Choose how Injector should fuzz (default: single)")
     parser.add_argument("--request", dest="request", action="store_true", help="Show the HTTP request.")
 
     if len(sys.argv) == 1:
@@ -61,7 +62,7 @@ def build_flags():
 
 def get_header(args):
     headers = {
-        "User-Agent": "Injector/0.1.0"
+        "User-Agent": f"Injector/{VERSION}"
     }
     if args.header:
         name, value = args.header.split(":", 1)
