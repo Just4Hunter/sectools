@@ -1,8 +1,13 @@
 # sectools
 
-A personal collection of small security tools, built and shared for anyone who finds them useful.
+A community-driven collection of small security tools.
 
-The tools focus on security research, bug bounty hunting, reconnaissance, and web security testing. Each tool is designed to be small, practical, and focused on a specific task.
+Have a useful security tool? Contribute it to the collection.
+
+Recon tools, scanners, fuzzers, exploit helpers, web security tools, and other practical utilities are welcome. The goal is simple: build a shared toolbox where anyone can contribute and everyone can benefit.
+
+> **Note:** Currently, only Python (`.py`) tools are supported.
+
 
 ## Structure
 
