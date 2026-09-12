@@ -86,4 +86,11 @@ When submitting a pull request:
 
 There is no requirement for a contribution to be huge or highly sophisticated. **Useful and practical is more important than large or complex.**
 
+## License
+
+By contributing to `sectools`, you agree that your contribution will be licensed under the **MIT License**.
+
+Only submit code that you have the right to license under the MIT License.
+
+
 Thanks for helping build `sectools`!
