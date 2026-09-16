@@ -22,10 +22,27 @@ sectools/
 ```
 
 All tools are kept under the `tools/` directory.
-
+    
 `install.sh` recursively scans `tools/` for Python tools and installs them into `~/.local/bin`.
 
 ## Installation
+
+### Notes
+`install.sh` recursively scans `tools/` for Python tools and installs them into `~/.local/bin`.
+
+Installation is optional. It does not change how the tools work; it only provides shorter commands. For example:
+
+```bash
+python injector.py
+```
+
+becomes:
+
+```
+injector
+```
+
+### Install
 
 Clone the repository:
 
@@ -108,6 +125,7 @@ The installer will automatically discover and install the tool.
 | Tool       | Description                                                   |
 | ---------- | ------------------------------------------------------------- |
 | `injector` | Generic injection testing tool using custom payload wordlists |
+| `racer`    | Send concurrent HTTP requests in synchronized bursts          |
 
 More tools will be added over time.
 

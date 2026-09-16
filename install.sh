@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+# Installer script for Python tools.
+# Installs tools from tools/ into ~/.local/bin.
+# It provides shorter, system-wide commands: `python injector.py` becomes `injector`,
+# allowing installed tools to be called from any directory.
+
 set -e
 
 INSTALL_DIR="$HOME/.local/bin"
