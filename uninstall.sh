@@ -1,41 +1,62 @@
 #!/usr/bin/env bash
 
+# Uninstaller script for Python tools.
+
 set -e
+
+tools=("injector" "racer" "subto")
 
 INSTALL_DIR="$HOME/.local/bin"
 TOOLS_DIR="$(cd "$(dirname "$0")/tools" && pwd)"
 
-if [ -n "$1" ]; then
-file="$TOOLS_DIR/$1.py"
+echo
+echo "Files will be uninstalled from: $INSTALL_DIR"
 
-if [ ! -f "$file" ]; then
-    echo "[!] Tool not found: $1"
-    exit 1
-fi
+while true; do
+    read -r -p "Are you sure you want to uninstall? [y/n] " confirm
 
-target="$INSTALL_DIR/$1"
+    case "$confirm" in
+        y|Y)
+            break
+            ;;
+        n|N)
+            echo "[!] Uninstallation cancelled."
+            exit 0
+            ;;
+        *)
+            echo "[!] Please enter y or n."
+            ;;
+    esac
+done
 
-if [ ! -L "$target" ]; then
-    echo "[!] Tool is not installed: $1"
-    exit 1
-fi
+echo
 
-echo "[+] Uninstalling $1"
+uninstall_tool() {
+    local name="$1"
+    local target="$INSTALL_DIR/$name"
+    local tool_dir="$TOOLS_DIR/$name"
 
-rm "$target"
-
-else
-while IFS= read -r -d '' file; do
-name="$(basename "$file" .py)"
-target="$INSTALL_DIR/$name"
-
-    if [ -L "$target" ]; then
-        echo "[+] Uninstalling $name"
-        rm "$target"
+    if [ ! -e "$target" ] && [ ! -L "$target" ]; then
+        echo "[!] Tool is not installed: $name"
+        return
     fi
 
-done < <(find "$TOOLS_DIR" -type f -name "*.py" -print0)
+    rm -f "$target"
 
+    if [ -d "$tool_dir/.venv" ]; then
+        echo "[*] Removing environment for $name"
+        rm -rf "$tool_dir/.venv"
+    fi
+
+    echo "[+] $name uninstalled"
+}
+
+if [ -n "$1" ]; then
+    uninstall_tool "$1"
+else
+    for tool in "${tools[@]}"; do
+        uninstall_tool "$tool"
+    done
 fi
 
 echo

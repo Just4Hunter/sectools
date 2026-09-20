@@ -1,0 +1,5 @@
+# subjack
+dnspython
+requests
+pyyaml
+colorama

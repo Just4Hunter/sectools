@@ -1,0 +1,241 @@
+# fingerprints.yaml
+
+services:
+  - name: Heroku
+    provider: heroku
+    cname:
+      - herokuapp.com
+      - herokudns.com
+      - herokussl.com
+      - herokucdn.com
+    fingerprints:
+      body:
+        - "No such app"
+    confidence: high
+
+  - name: Shopify
+    provider: shopify
+    cname:
+      - myshopify.com
+      - shops.myshopify.com
+    fingerprints:
+      body:
+        - "Sorry, this shop is currently unavailable."
+    confidence: high
+
+  - name: Fastly
+    provider: fastly
+    cname:
+      - fastly.net
+      - global.ssl.fastly.net
+    fingerprints:
+      body:
+        - "Fastly error: unknown domain"
+    confidence: high
+
+  - name: Pantheon
+    provider: pantheon
+    cname:
+      - pantheonsite.io
+    fingerprints:
+      body:
+        - "The gods are wise"
+    confidence: high
+
+  - name: Zendesk
+    provider: zendesk
+    cname:
+      - zendesk.com
+    fingerprints:
+      body:
+        - "Help Center Closed"
+    confidence: high
+
+  - name: Ghost
+    provider: ghost
+    cname:
+      - ghost.io
+    fingerprints:
+      body:
+        - "The thing you were looking for is no longer here"
+    confidence: high
+
+  - name: Unbounce
+    provider: unbounce
+    cname:
+      - unbouncepages.com
+    fingerprints:
+      body:
+        - "Sorry, the page you were looking for doesn't exist"
+    confidence: high
+
+  - name: Instapage
+    provider: instapage
+    cname:
+      - pageserve.co
+      - secure.pageserve.co
+    confidence: medium
+
+  - name: Acquia
+    provider: acquia
+    cname:
+      - acquia.com
+    fingerprints:
+      body:
+        - "The site you are looking for could not be found."
+    confidence: medium
+
+  - name: Aha!
+    provider: aha
+    cname:
+      - ideas.aha.io
+    fingerprints:
+      body:
+        - "There is no portal here"
+    confidence: high
+
+  - name: Agile CRM
+    provider: agilecrm
+    cname:
+      - cname.agilecrm.com
+      - agilecrm.com
+    fingerprints:
+      body:
+        - "Sorry, this page is no longer available."
+    confidence: high
+
+  - name: AfterShip
+    provider: aftership
+    cname:
+      - aftership.com
+    fingerprints:
+      body:
+        - "The page you're looking for doesn't exist."
+    confidence: medium
+
+  - name: ActiveCampaign
+    provider: activecampaign
+    cname:
+      - activehosted.com
+    fingerprints:
+      body:
+        - "LIGHTTPD - fly light"
+    confidence: medium
+
+  - name: Cargo
+    provider: cargo
+    cname:
+      - cargocollective.com
+    fingerprints:
+      body:
+        - "If you're moving your domain away from Cargo"
+    confidence: high
+
+  - name: ReadMe
+    provider: readme
+    cname:
+      - readme.io
+    fingerprints:
+      body:
+        - "The creators of this project are still working on making everything perfect!"
+    confidence: high
+
+  - name: SurveySparrow
+    provider: surveysparrow
+    cname:
+      - surveysparrow.com
+    fingerprints:
+      body:
+        - "Account not found."
+    confidence: high
+
+  - name: Uberflip
+    provider: uberflip
+    cname:
+      - read.uberflip.com
+    fingerprints:
+      body:
+        - "The URL you've accessed does not provide a hub."
+    confidence: high
+
+  - name: UserVoice
+    provider: uservoice
+    cname:
+      - uservoice.com
+    fingerprints:
+      body:
+        - "This UserVoice subdomain is currently available!"
+    confidence: medium
+
+  - name: Strikingly
+    provider: strikingly
+    cname:
+      - strikinglydns.com
+    fingerprints:
+      body:
+        - "PAGE NOT FOUND."
+    confidence: high
+
+  - name: Anima
+    provider: anima
+    cname:
+      - animaapp.io
+    fingerprints:
+      body:
+        - "The page you were looking for does not exist."
+    confidence: high
+
+  - name: JetBrains YouTrack
+    provider: jetbrains
+    cname:
+      - youtrack.cloud
+    fingerprints:
+      body:
+        - "is not a registered InCloud YouTrack"
+    confidence: high
+
+  - name: Surge
+    provider: surge
+    cname:
+      - surge.sh
+    fingerprints:
+      body:
+        - "project not found"
+    confidence: high
+
+  - name: Ngrok
+    provider: ngrok
+    cname:
+      - ngrok.io
+    fingerprints:
+      body:
+        - "Tunnel"
+        - "not found"
+    confidence: high
+
+  - name: WordPress.com
+    provider: wordpress
+    cname:
+      - wordpress.com
+    fingerprints:
+      body:
+        - "Do you want to register"
+    confidence: medium
+
+  - name: Worksites
+    provider: worksites
+    cname:
+      - worksites.net
+    fingerprints:
+      body:
+        - "the website you're looking for doesn't exist"
+    confidence: high
+
+  - name: Uptimerobot
+    provider: uptimerobot
+    cname:
+      - stats.uptimerobot.com
+    fingerprints:
+      body:
+        - "page not found"
+    confidence: medium

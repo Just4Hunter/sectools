@@ -51,6 +51,12 @@ git clone https://github.com/Just4Hunter/sectools.git
 cd sectools
 ```
 
+Install the required Python dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
 Run the installer to install all available tools:
 
 ```bash
@@ -126,6 +132,7 @@ The installer will automatically discover and install the tool.
 | ---------- | ------------------------------------------------------------- |
 | `injector` | Generic injection testing tool using custom payload wordlists |
 | `racer`    | Send concurrent HTTP requests in synchronized bursts          |
+| `subto`    | Subdomain takeover detection tool                             |
 
 More tools will be added over time.
 
