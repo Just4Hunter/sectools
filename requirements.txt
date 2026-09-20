@@ -1,4 +1,4 @@
-# subjack
+# subto
 dnspython
 requests
 pyyaml

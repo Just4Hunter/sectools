@@ -31,14 +31,14 @@ def parse_args():
     performance.add_argument("--delay", "--delay", dest="delay", type=float, default=0.0, help="Delay between requests in milliseconds")
     performance.add_argument("--timeout", dest="timeout", type=int, default=6, help="Request timeout in seconds (default: 6)")
 
-    fingerprint = parser.add_argument_group("FINGERPRINT")
-    fingerprint.add_argument("--provider", dest="provider", type=str, help="Scan only a specific provider")
-    fingerprint.add_argument("--list-providers", dest="list_providers", type=str, help="List supported providers")
+    # fingerprint = parser.add_argument_group("FINGERPRINT")
+    # fingerprint.add_argument("--provider", dest="provider", type=str, help="Scan only a specific provider")
+    # fingerprint.add_argument("--list-providers", dest="list_providers", type=str, help="List supported providers")
 
-    network = parser.add_argument_group("NETWORK")
-    network.add_argument("--http", dest="http", action="store_true", help="Check HTTP")
-    network.add_argument("--https", dest="https", action="store_true", help="Check HTTPS")
-    network.add_argument("--dns-only", dest="dns_only", action="store_true", help="DNS checks only")
+    # network = parser.add_argument_group("NETWORK")
+    # network.add_argument("--http", dest="http", action="store_true", help="Check HTTP")
+    # network.add_argument("--https", dest="https", action="store_true", help="Check HTTPS")
+    # network.add_argument("--dns-only", dest="dns_only", action="store_true", help="DNS checks only")
 
     args = parser.parse_args()
 
