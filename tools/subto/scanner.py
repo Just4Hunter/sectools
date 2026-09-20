@@ -2,7 +2,7 @@ from dns_utils.cname import get_cname
 from checker import requester, checker
 
 
-def scan(target, config):
+def scan(target, config, fingerprint):
     cname = get_cname(target)
 
     if not cname:
