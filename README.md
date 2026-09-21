@@ -1,6 +1,6 @@
 # sectools
 
-A community-driven collection of small security tools.
+A small collection of personal security tools
 
 Have a useful security tool? Contribute it to the collection.
 
